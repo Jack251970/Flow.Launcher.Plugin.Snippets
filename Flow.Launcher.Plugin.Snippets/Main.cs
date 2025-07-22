@@ -73,7 +73,7 @@ namespace Flow.Launcher.Plugin.Snippets
                 },
                 Action = _ =>
                 {
-                    _context.API.CopyToClipboard(sm.Value, showDefaultNotification: false);
+                    _context.API.CopyToClipboard(sm.Value, showDefaultNotification: true);
                     return true;
                 }
             };
