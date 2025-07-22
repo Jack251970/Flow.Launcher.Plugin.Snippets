@@ -26,7 +26,7 @@ namespace Flow.Launcher.Plugin.Snippets
             if (_settings.StorageType == StorageType.Sqlite)
             {
                 _snippetManage =
-                    new SqliteSnippetManage(FileUtil.GetDataDirectory(true, () => GetType().Assembly.GetName().Name));
+                    new SqliteSnippetManage(context.CurrentPluginMetadata.PluginSettingsDirectoryPath);
             }
             else
             {
