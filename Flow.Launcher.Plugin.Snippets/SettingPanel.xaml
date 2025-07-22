@@ -7,41 +7,47 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
-    <StackPanel Orientation="Vertical" Margin="60,15,0,15">
-        <StackPanel Orientation="Horizontal" Margin="10,5,5,5">
-            <Button Click="ButtonOpenManage_OnClick" Margin="0,0,10,0" VerticalAlignment="Center"
+    <StackPanel Orientation="Vertical" Margin="{StaticResource SettingPanelMargin}">
+        <WrapPanel Orientation="Horizontal">
+            
+            <Button Click="ButtonOpenManage_OnClick" Margin="{StaticResource SettingPanelItemRightTopBottomMargin}" VerticalAlignment="Center"
                     Content="{DynamicResource snippets_plugin_manage_snippets}">
             </Button>
-            <Button Click="ButtonExport_OnClick" Margin="10,0,10,0" VerticalAlignment="Center"
+            
+            <Button Click="ButtonExport_OnClick" Margin="{StaticResource SettingPanelItemRightTopBottomMargin}" VerticalAlignment="Center"
                     Content="{DynamicResource snippets_plugin_export}">
             </Button>
-            <Button Click="ButtonImport_OnClick" Margin="10,0,10,0" VerticalAlignment="Center"
+            
+            <Button Click="ButtonImport_OnClick" Margin="{StaticResource SettingPanelItemRightTopBottomMargin}" VerticalAlignment="Center"
                     Content="{DynamicResource snippets_plugin_import}">
             </Button>
-            <Button Click="ButtonResetScore_OnClick" Margin="10,0,10,0" VerticalAlignment="Center"
+            
+            <Button Click="ButtonResetScore_OnClick" Margin="{StaticResource SettingPanelItemRightTopBottomMargin}" VerticalAlignment="Center"
                     Content="{DynamicResource snippets_plugin_reset_score}">
-            </Button>   
-            <Button Click="ButtonClear_OnClick" Margin="10,0,10,0" VerticalAlignment="Center"
+            </Button>
+            
+            <Button Click="ButtonClear_OnClick" Margin="{StaticResource SettingPanelItemTopBottomMargin}" VerticalAlignment="Center"
                     Content="{DynamicResource snippets_plugin_clear}">
             </Button>
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="10,5,5,5">
+        </WrapPanel>
 
-            <Label VerticalAlignment="Center"
+        <WrapPanel Orientation="Horizontal">
+
+            <Label VerticalAlignment="Center" Margin="{StaticResource SettingPanelItemRightTopBottomMargin}" 
                    Content="{DynamicResource snippets_plugin_storage_mode}">
             </Label>
 
-            <ComboBox Name="ComboBoxStorageMode" Margin="10,0,10,0" Width="200" VerticalAlignment="Center">
+            <ComboBox Name="ComboBoxStorageMode" Margin="{StaticResource SettingPanelItemRightTopBottomMargin}" Width="200" VerticalAlignment="Center">
                 <ComboBoxItem Content="{DynamicResource snippets_plugin_storage_json_setting}"></ComboBoxItem>
                 <ComboBoxItem Content="{DynamicResource snippets_plugin_storage_sqlite}"></ComboBoxItem>
             </ComboBox>
 
-            <Button Click="ButtonChangeAndRestart_OnClick" Margin="10,0,10,0" VerticalAlignment="Center"
+            <Button Click="ButtonChangeAndRestart_OnClick" Margin="{StaticResource SettingPanelItemTopBottomMargin}" VerticalAlignment="Center"
                     Content="{DynamicResource snippets_plugin_change_and_restart_app}">
             </Button>
 
-        </StackPanel>
+        </WrapPanel>
     </StackPanel>
 
 </UserControl>
