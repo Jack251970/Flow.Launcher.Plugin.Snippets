@@ -44,7 +44,7 @@ public static class VariableExpander
                     "date" => now.ToString(format ?? "yyyy-MM-dd"),
                     "time" => now.ToString(format ?? "HH:mm:ss"),
                     "datetime" => now.ToString(format ?? "yyyy-MM-dd HH:mm:ss"),
-                    "timestamp" => ((DateTimeOffset)now).ToUnixTimeSeconds().ToString(),
+                    "timestamp" => new DateTimeOffset(now).ToUnixTimeSeconds().ToString(),
                     "year" => now.Year.ToString(),
                     "month" => now.Month.ToString("D2"),
                     "day" => now.Day.ToString("D2"),
